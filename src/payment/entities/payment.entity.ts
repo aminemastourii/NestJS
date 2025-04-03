@@ -1,13 +1,12 @@
 import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
 
 @Entity()
-
 export class Payment {
     @PrimaryGeneratedColumn()
     id: number;
   
     @Column()
-    currenct: string;
+    currency: string;
   
     @Column()
     amount: number;
