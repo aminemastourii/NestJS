@@ -5,6 +5,7 @@ import { BookingModule } from './booking/booking.module';
 import { PaymentModule } from './payment/payment.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { DataSource } from 'typeorm';
+import { Payment } from './payment/entities/payment.entity';
 
 @Module ({
 imports: [  TypeOrmModule.forRoot({
@@ -14,7 +15,7 @@ imports: [  TypeOrmModule.forRoot({
   username: 'root',
   password: '',
   database: 'db_nestjs',
-  entities: [],
+  entities: [Payment],
   synchronize: true,
 }),
 ]
