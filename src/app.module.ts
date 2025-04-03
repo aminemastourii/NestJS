@@ -4,6 +4,7 @@ import { AppService } from './app.service';
 import { BookingModule } from './booking/booking.module';
 import { PaymentModule } from './payment/payment.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { DataSource } from 'typeorm';
 
 @Module ({
 imports: [  TypeOrmModule.forRoot({
@@ -19,8 +20,10 @@ imports: [  TypeOrmModule.forRoot({
 ]
 })
 @Module({
-  imports: [BookingModule, PaymentModule ],
+  imports: [BookingModule, PaymentModule,TypeOrmModule.forRoot() ],
   controllers: [AppController ],
   providers: [AppService],
 })
-export class AppModule {}
+export class AppModule {
+  constructor(private dataSource: DataSource) {}}
+
