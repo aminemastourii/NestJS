@@ -16,7 +16,7 @@ import { Payment } from './payment/entities/payment.entity';
     username: 'root',
     password: '',
     database: 'db_nestjs',
-    entities: [Payment],
+    autoLoadEntities: true,
     synchronize: true,
   }) ],
   controllers: [AppController ],
