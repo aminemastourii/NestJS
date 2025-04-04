@@ -5,7 +5,7 @@ import { AppService } from './app.service';
 import { BookingModule } from './booking/booking.module';
 import { PaymentModule } from './payment/payment.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { Payment } from './payment/entities/payment.entity';
+
 
 
 
